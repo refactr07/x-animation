@@ -1,0 +1,45 @@
+{
+  "notes": "The stages a section can play on. One backdrop per section, for its whole length; with policy `rotate` the next section uses a different one, picked by what the section mostly shows. All are dark and cool or neutral: never a warm or reddish background. Patterns sit on the half-unit lattice (67.5 px at 1080p = 0.5 Manim units) and are anchored on the frame centre, so objects placed on whole and half units line up with them. Both engines paint the same generated PNG (tools/backdrops.py), so a cut between engines never shifts the backdrop by a pixel. Sizes are px at 1080p.",
+  "policy": {
+    "per_section": 1,
+    "default": "rotate",
+    "rotation": ["dots", "ink", "grid", "graphite"]
+  },
+  "styles": {
+    "black": {
+      "name": "Black",
+      "bg": "#000000",
+      "pattern": null,
+      "mood": "the pure 3Blue1Brown stage",
+      "use_for": "3D, dense math, anything where a pattern would compete with fine detail"
+    },
+    "dots": {
+      "name": "Black Field",
+      "bg": "#000000",
+      "pattern": {"kind": "dots", "color": "#3A3D41", "radius_px": 2.25, "spacing_px": 67.5},
+      "mood": "black with a measured field: mathematical, spatial",
+      "use_for": "math, vectors, graphs and plots, concepts and metaphors, reveals and recaps"
+    },
+    "ink": {
+      "name": "Ink",
+      "bg": "#0A0F16",
+      "pattern": null,
+      "mood": "quiet, neutral",
+      "use_for": "narrative beats, prompts and sentences, people and stories"
+    },
+    "grid": {
+      "name": "Navy Grid",
+      "bg": "#050B2C",
+      "pattern": {"kind": "grid", "color": "#18214A", "width_px": 1.25, "spacing_px": 67.5},
+      "mood": "blueprint, engineered",
+      "use_for": "systems, architectures, pipelines, data flow"
+    },
+    "graphite": {
+      "name": "Graphite",
+      "bg": "#1D1F25",
+      "pattern": null,
+      "mood": "editor-like, focused, practical",
+      "use_for": "code, terminals, tools, step-by-step procedures, comparisons"
+    }
+  }
+}

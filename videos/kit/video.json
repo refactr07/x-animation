@@ -1,0 +1,8 @@
+{
+  "title": "Kit self-tests",
+  "fps": 60,
+  "wpm": 150,
+  "file_prefix": "kit",
+  "backdrop_policy": "fixed",
+  "roles": {}
+}

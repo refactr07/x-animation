@@ -1,0 +1,23 @@
+{
+  "section": "01-remotion-kit",
+  "title": "Remotion kit specimen",
+  "file": "kit_remotion",
+  "backdrop": "dots",
+  "timing": {
+    "source": "estimate",
+    "wpm": 150
+  },
+  "tail": 0.6,
+  "beats": [
+    {
+      "name": "Sheet",
+      "text": "Every component of the Remotion kit, on one stage, arriving the way it arrives in a video.",
+      "start": 0.000,
+      "end": 6.800,
+      "words": [["Every", 0.000, 0.388], ["component", 0.388, 0.919], ["of", 0.919, 1.199], ["the", 1.199, 1.514], ["Remotion", 1.514, 2.010], ["kit,", 2.010, 2.326], ["on", 2.495, 2.775], ["one", 2.775, 3.090], ["stage,", 3.090, 3.478], ["arriving", 3.647, 4.143], ["the", 4.143, 4.458], ["way", 4.458, 4.774], ["it", 4.774, 5.053], ["arrives", 5.053, 5.513], ["in", 5.513, 5.792], ["a", 5.792, 6.036], ["video.", 6.036, 6.423]]
+    }
+  ],
+  "segments": [
+    {"engine": "remotion", "component": "KitSheet", "from": "Sheet", "to": "END"}
+  ]
+}

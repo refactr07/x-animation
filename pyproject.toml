@@ -1,0 +1,23 @@
+[project]
+name = "x-animation"
+version = "0.1.0"
+description = "Two-engine motion studio: Manim CE scenes and the shared Python kit (the Remotion half lives in package.json)."
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "manim[typst]==0.22.1",
+]
+
+[project.optional-dependencies]
+# Word-level voiceover alignment (tools/align.py). Install with: uv sync --extra voice
+voice = ["faster-whisper>=1.2"]
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+# Two packages, installed editable by `uv sync`:
+#   xcore  engine-agnostic: tokens, the beat/cue timing model, backdrops (no Manim import, used by tools/)
+#   xkit   the Manim kit; every scene starts with `from xkit import *`
+[tool.setuptools.packages.find]
+where = ["kit/python"]
+include = ["xkit*", "xcore*"]

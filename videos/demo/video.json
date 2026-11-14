@@ -1,0 +1,14 @@
+{
+  "title": "Demo: how a model learns",
+  "fps": 60,
+  "wpm": 150,
+  "file_prefix": "demo",
+  "backdrop_policy": "rotate",
+  "roles": {
+    "blue": "the question going in",
+    "teal": "the model's settings",
+    "red": "the loss: how wrong it is",
+    "yellow": "the thing to look at",
+    "green": "right"
+  }
+}

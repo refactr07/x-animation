@@ -1,0 +1,37 @@
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Python / Manim
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+media/
+.cache/
+
+# Node / Remotion
+node_modules/
+out/
+
+# Generated, rebuildable: backdrops, embedded Manim clips, finished renders
+public/backdrops/
+public/manim/
+renders/
+
+# Media never belongs in git: masters, voiceovers, reference footage
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.wav
+*.mp3
+*.m4a
+*.aiff
+*.flac
+
+# Local-only notes and secrets
+.env
+.env.*
+*.local.json

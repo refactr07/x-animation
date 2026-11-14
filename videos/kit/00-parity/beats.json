@@ -1,0 +1,31 @@
+{
+  "section": "00-parity",
+  "title": "Engine parity card",
+  "file": "kit_parity",
+  "backdrop": "dots",
+  "timing": {
+    "source": "estimate",
+    "wpm": 150
+  },
+  "tail": 0.0,
+  "beats": [
+    {
+      "name": "Manim",
+      "text": "Manim card.",
+      "start": 0.000,
+      "end": 1.500,
+      "words": [["Manim", 0.000, 0.265], ["card.", 0.265, 0.505]]
+    },
+    {
+      "name": "Remotion",
+      "text": "Remotion card.",
+      "start": 1.500,
+      "end": 3.000,
+      "words": [["Remotion", 1.500, 1.839], ["card.", 1.839, 2.079]]
+    }
+  ],
+  "segments": [
+    {"engine": "manim", "scene": "CardM", "from": "Manim", "to": "Remotion"},
+    {"engine": "remotion", "component": "CardR", "from": "Remotion", "to": "END"}
+  ]
+}

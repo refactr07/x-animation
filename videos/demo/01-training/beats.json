@@ -1,0 +1,74 @@
+{
+  "section": "01-training",
+  "title": "How a model learns",
+  "file": "demo_01",
+  "backdrop": "dots",
+  "timing": {
+    "source": "estimate",
+    "wpm": 150.0
+  },
+  "tail": 0.8,
+  "beats": [
+    {
+      "name": "Noise",
+      "text": "Every AI model starts out as noise.",
+      "start": 0.000,
+      "end": 2.744,
+      "picture": "The model draws on as a box of dials; every needle swings to a random setting.",
+      "words": [["Every", 0.000, 0.375], ["AI", 0.375, 0.645], ["model", 0.645, 1.020], ["starts", 1.020, 1.429], ["out", 1.429, 1.734], ["as", 1.734, 2.005], ["noise.", 2.005, 2.379]]
+    },
+    {
+      "name": "Guess",
+      "text": "Ask it a question, and it guesses.",
+      "start": 2.744,
+      "end": 5.582,
+      "picture": "A prompt slides in on the left, an arrow feeds the model, and a flat list of unsure guesses pops out on the right.",
+      "words": [["Ask", 2.744, 3.049], ["it", 3.049, 3.319], ["a", 3.319, 3.554], ["question,", 3.554, 4.034], ["and", 4.198, 4.503], ["it", 4.503, 4.773], ["guesses.", 4.773, 5.218]]
+    },
+    {
+      "name": "Wrong",
+      "text": "Training measures how wrong that guess is,",
+      "start": 5.582,
+      "end": 8.370,
+      "picture": "The guesses collapse into one red number, the loss, which becomes a dot sitting high on a curve.",
+      "words": [["Training", 5.582, 6.061], ["measures", 6.061, 6.541], ["how", 6.541, 6.846], ["wrong", 6.846, 7.221], ["that", 7.221, 7.561], ["guess", 7.561, 7.935], ["is,", 7.935, 8.206]]
+    },
+    {
+      "name": "Downhill",
+      "text": "and nudges every number inside the model a little, downhill.",
+      "start": 8.370,
+      "end": 12.611,
+      "picture": "The dot steps down the curve; with every step the dials turn a little and the loss falls.",
+      "words": [["and", 8.370, 8.675], ["nudges", 8.675, 9.085], ["every", 9.085, 9.460], ["number", 9.460, 9.869], ["inside", 9.869, 10.279], ["the", 10.279, 10.584], ["model", 10.584, 10.959], ["a", 10.959, 11.194], ["little,", 11.194, 11.604], ["downhill.", 11.768, 12.247]]
+    },
+    {
+      "name": "Code",
+      "text": "In code, that whole idea is four lines.",
+      "start": 12.611,
+      "end": 15.789,
+      "picture": "Cut to an editor: the four lines of a training loop arrive one by one.",
+      "words": [["In", 12.611, 12.881], ["code,", 12.881, 13.221], ["that", 13.385, 13.725], ["whole", 13.725, 14.100], ["idea", 14.100, 14.440], ["is", 14.440, 14.710], ["four", 14.710, 15.050], ["lines.", 15.050, 15.425]]
+    },
+    {
+      "name": "Loop",
+      "text": "Run them a few thousand times,",
+      "start": 15.789,
+      "end": 17.992,
+      "picture": "A highlight cycles through the four lines while a step counter runs to 5,000 and the loss readout falls.",
+      "words": [["Run", 15.789, 16.094], ["them", 16.094, 16.434], ["a", 16.434, 16.669], ["few", 16.669, 16.974], ["thousand", 16.974, 17.454], ["times,", 17.454, 17.829]]
+    },
+    {
+      "name": "Works",
+      "text": "and the noise turns into something that knows the answer.",
+      "start": 17.992,
+      "end": 22.000,
+      "picture": "Back to the model: its dials are settled, the same prompt goes in, and one tall bar answers: Paris.",
+      "words": [["and", 17.992, 18.297], ["the", 18.297, 18.602], ["noise", 18.602, 18.977], ["turns", 18.977, 19.352], ["into", 19.352, 19.692], ["something", 19.692, 20.206], ["that", 20.206, 20.546], ["knows", 20.546, 20.921], ["the", 20.921, 21.226], ["answer.", 21.226, 21.635]]
+    }
+  ],
+  "segments": [
+    {"engine": "manim", "scene": "Learn", "from": "Noise", "to": "Code"},
+    {"engine": "remotion", "component": "TrainingLoop", "from": "Code", "to": "Works"},
+    {"engine": "manim", "scene": "Answer", "from": "Works", "to": "END"}
+  ]
+}

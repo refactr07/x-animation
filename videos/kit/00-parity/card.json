@@ -1,0 +1,23 @@
+{
+  "notes": "One test card, drawn by both engines from this file. Positions are px on the 1920x1080 canvas; text is placed by its pen origin (x) and baseline (y).",
+  "colors": ["blue", "teal", "green", "yellow", "gold", "orange", "red", "pink", "purple", "text", "grey.b"],
+  "patch": {"w": 120, "h": 80, "x0": 140, "dx": 150, "y": 110},
+  "tint": {"w": 120, "h": 80, "x0": 140, "dx": 150, "y": 220, "amount": 0.18},
+  "text": [
+    {"size": "title", "family": "serif", "x": 140, "y": 390, "text": "Maximum fixed 0123"},
+    {"size": "label", "family": "serif", "x": 140, "y": 480, "text": "Maximum fixed 0123"},
+    {"size": "body", "family": "serif", "x": 140, "y": 560, "text": "Maximum fixed 0123"},
+    {"size": "small", "family": "serif", "x": 140, "y": 630, "text": "Maximum fixed 0123"},
+    {"size": "tiny", "family": "serif", "x": 140, "y": 690, "text": "Maximum fixed 0123"},
+    {"size": "body", "family": "mono", "x": 140, "y": 780, "text": "loss.backward"},
+    {"size": "body", "family": "sans", "x": 140, "y": 870, "text": "Maximum fixed 0123"}
+  ],
+  "strokes": [
+    {"name": "hair", "x1": 1250, "x2": 1750, "y": 380},
+    {"name": "thin", "x1": 1250, "x2": 1750, "y": 460},
+    {"name": "shape", "x1": 1250, "x2": 1750, "y": 540},
+    {"name": "hero", "x1": 1250, "x2": 1750, "y": 620},
+    {"name": "arrow", "x1": 1250, "x2": 1750, "y": 700}
+  ],
+  "backdrop_probe": {"x": 0, "y": 940, "w": 1920, "h": 140}
+}
