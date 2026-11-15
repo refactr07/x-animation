@@ -23,6 +23,7 @@ case "$cmd" in
   doctor)     py tools/doctor.py "$@" ;;
   backdrops)  py tools/backdrops.py "$@" ;;
   specimens)  py tools/specimens_render.py "$@" ;;
+  skill)      py tools/build_skill.py "$@" ;;
   studio)     py tools/registry.py && exec npx remotion studio "$@" ;;
   typecheck)  py tools/registry.py && exec npx tsc --noEmit ;;
   help|-h|--help)
@@ -51,6 +52,7 @@ x-animation: script in, verified video out.
     ./x contrast           every colour against every backdrop
     ./x specimens          the kit's colours, shapes and pictograms as sheets
     ./x typecheck          TypeScript           ./x sync    refresh Remotion's list of sections
+    ./x skill [--install]  build the refactr-animation-1 Claude skill from this repo (and install it)
 
 <section> is a folder, video/section, or a section's name or number in the active video (studio.json).
 TXT

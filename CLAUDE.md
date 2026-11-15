@@ -12,8 +12,8 @@ read one style (`theme/tokens.json`) and one clock per section (`beats.json`).
 2. **When feedback is given, log it in `FEEDBACK.md` in the same turn**: the words as given, what
    was wrong, the fix, the rule. Never repeat a logged mistake.
 3. **In this repository a pasted script is built with this repository's workflow** (the
-   `x-animation` skill in `.claude/skills/`), not with any other animation skill installed on the
-   machine, unless one is asked for by name.
+   `refactr-animation-1` skill), not with any other animation skill installed on the machine,
+   unless one is asked for by name.
 4. **Never type a colour, a font, a size or a duration into a scene or a component.** Import the
    name (`BLUE`, `BODY`, `P.blue`, `TYPE.body`). Values live in `theme/tokens.json`.
 5. **Never put a number of seconds that places a beat into scene code.** `beat()`, `on()`,
@@ -95,6 +95,7 @@ From [`FEEDBACK.md`](FEEDBACK.md) and [`STYLE.md`](STYLE.md):
 ./x final <section>                       # 3840x2160 master, verified
 ./x align <section> voiceover.wav         # retime to a recorded voiceover
 ./x parity | contrast | specimens | doctor | typecheck | studio
+./x skill --install                       # rebuild the refactr-animation-1 skill from this repo and install it
 ```
 
 `<section>` is a folder, `video/section`, or a section's name or number in the active video.
@@ -113,6 +114,7 @@ videos/demo/01-training/            the reference section, built in both engines
 videos/kit/00-parity/               the engine parity test card
 src/                                Remotion entry; sections.generated.tsx is written by ./x sync
 tools/                              everything ./x runs
+.claude/skills/refactr-animation-1/  the skill: SKILL.md and scripts/new_project.sh (./x skill bundles the repo into it)
 public/fonts/                       Latin Modern (Computer Modern), shared by both engines
 renders/, .cache/, public/backdrops/   generated, not committed
 docs/                               WORKFLOW, ENGINE_ROUTING, KIT, PITFALLS, RESEARCH

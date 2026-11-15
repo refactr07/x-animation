@@ -97,6 +97,7 @@ move. [`STYLE.md`](STYLE.md) has the rules; `theme/tokens.json` has the values.
 | `./x align` | Retime a section to a recorded voiceover |
 | `./x parity`, `contrast`, `specimens`, `doctor`, `typecheck` | Check the system |
 | `./x studio` | Remotion Studio, to scrub the Remotion segments |
+| `./x skill --install` | Build the `refactr-animation-1` Claude skill from this repo and install it |
 
 ## Layout
 
@@ -116,9 +117,14 @@ CLAUDE.md              the working agreement for Claude Code in this repo
 ## Working with Claude Code
 
 Open this folder in Claude Code and paste a portion of a script. [`CLAUDE.md`](CLAUDE.md) and the
-skill in `.claude/skills/x-animation/` tell it how to turn that into a section: plan the beats,
-pick the engine for each stretch, build, check and render. Reviews go into
+skill in `.claude/skills/refactr-animation-1/` tell it how to turn that into a section: plan the
+beats, pick the engine for each stretch, build, check and render. Reviews go into
 [`FEEDBACK.md`](FEEDBACK.md), so a note given once is kept.
+
+The same skill works outside this repo. `./x skill --install` bundles the whole studio into
+`~/.claude/skills/refactr-animation-1`, and `dist/refactr-animation-1.skill` is the same thing as
+one file to share. In any other folder the skill then sets up a workspace first
+(`scripts/new_project.sh`) and carries on from there.
 
 ## Research
 

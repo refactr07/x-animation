@@ -17,8 +17,12 @@ echo "== Python: Manim Community + the kit =="
 if [ "${1:-}" = "--voice" ]; then uv sync --extra voice; else uv sync; fi
 
 echo "== Node: Remotion =="
-if [ -f package-lock.json ]; then npm ci --no-fund --no-audit; else npm install --no-fund --no-audit; fi
-npx --no-install remotion browser ensure
+if [ -L node_modules ]; then
+  echo "node_modules is a link to another workspace: using its packages and browser"
+else
+  if [ -f package-lock.json ]; then npm ci --no-fund --no-audit; else npm install --no-fund --no-audit; fi
+  npx --no-install remotion browser ensure
+fi
 
 echo "== Backdrops and Remotion's list of sections =="
 uv run -q python -W ignore tools/backdrops.py

@@ -19,6 +19,7 @@ out/
 public/backdrops/
 public/manim/
 renders/
+dist/
 
 # Media never belongs in git: masters, voiceovers, reference footage
 *.mp4
