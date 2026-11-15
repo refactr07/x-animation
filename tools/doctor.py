@@ -77,7 +77,8 @@ def main() -> None:
     add("fonts", not missing, f"{len(files)} faces in public/fonts" if not missing else f"missing {missing}")
 
     made = len(list((PUBLIC / "backdrops").glob("*.png"))) if (PUBLIC / "backdrops").exists() else 0
-    add("backdrops", made >= len(BACKDROPS["styles"]), f"{made} files" if made else "none yet: ./x backdrops (renders make them as needed)")
+    # never a fault: a render draws the backdrop it needs; ./x backdrops draws them all (for Studio)
+    add("backdrops", True, f"{made} of {len(BACKDROPS['styles']) * 3} drawn (renders draw what they need; ./x backdrops draws all)")
 
     check = subprocess.run([sys.executable, str(ROOT / "tools" / "registry.py"), "--check"], capture_output=True, text=True)
     add("section registry", check.returncode == 0, "up to date" if check.returncode == 0 else "out of date: ./x sync")
